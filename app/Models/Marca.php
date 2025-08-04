@@ -1,19 +1,41 @@
-
 <?php
 
-namespace App\Models;
+namespace App\Http\Controllers;
 
-use Illuminate\Database\Eloquent\Factories\HasFactory;
-use Illuminate\Database\Eloquent\Model;
+use App\Models\Marca;
+use Illuminate\Http\Request;
 
-class Marca extends Model
+class MarcaController extends Controller
 {
-    use HasFactory;
-
-    protected $fillable = ['nombre'];
-
-    public function productos()
+    public function index()
     {
-        return $this->hasMany(Producto::class);
+        return Marca::all();
+    }
+
+    public function store(Request $request)
+    {
+        $request->validate([
+            'nombre' => 'required|string|max:255'
+        ]);
+
+        return Marca::create($request->all());
+    }
+
+    public function show($id)
+    {
+        return Marca::findOrFail($id);
+    }
+
+    public function update(Request $request, $id)
+    {
+        $marca = Marca::findOrFail($id);
+        $marca->update($request->all());
+
+        return $marca;
+    }
+
+    public function destroy($id)
+    {
+        return Marca::destroy($id);
     }
 }
