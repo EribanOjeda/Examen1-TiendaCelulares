@@ -1,65 +1,32 @@
+# Examen 1 – Tienda de Celulares 📱
 
-# Examen1 - Tienda de Celulares 📱
-
-Proyecto Laravel API RESTful con autenticación usando Sanctum.
+Proyecto desarrollado para el Primer Examen Parcial de la materia **Taller de Aplicaciones de Internet** con el docente **Ing. Víctor Pérez Rojas**.
 
 ---
 
-## 🔧 Requisitos
+## 🧪 Funcionalidades
 
+- Registro y Login de usuarios con **Laravel Sanctum**.
+- CRUD completo de **Marcas**.
+- CRUD completo de **Productos** (relacionados con marcas).
+- Pruebas de API realizadas en **Postman**.
+
+---
+
+## 🛠️ Tecnologías Utilizadas
+
+- Laravel 12
 - PHP 8.x
-- Composer
 - MySQL
-- Node.js y npm
+- Laravel Sanctum
+- Postman
+- Git & GitHub
 
 ---
 
-## 🚀 Instalación y configuración
+## ▶️ Cómo ejecutar el proyecto
+
+1. Clonar el repositorio:
 
 ```bash
-git clone https://github.com/tuusuario/Examen1-TiendaCelulares.git
-cd Examen1-TiendaCelulares
-composer install
-npm install && npm run dev
-cp .env.example .env
-php artisan key:generate
-```
-
-Configura tu archivo `.env` con tus credenciales MySQL:
-
-```
-DB_DATABASE=tiendadb
-DB_USERNAME=root
-DB_PASSWORD=
-```
-
-Luego ejecuta:
-
-```bash
-php artisan migrate
-php artisan serve
-```
-
----
-
-## 🔐 Endpoints API
-
-- POST `/api/register`
-- POST `/api/login`
-- POST `/api/logout` (requiere token)
-- CRUD `/api/marcas`
-- CRUD `/api/productos`
-
----
-
-## 🧪 Pruebas con Postman
-
-1. Registrar y loguear usuario
-2. Usar el token en rutas protegidas (Bearer token)
-3. Probar CRUDs de marcas y productos
-
----
-
-## 📂 Autor
-
-Eriban Ojeda – Examen 1 – Taller de Aplicaciones de Internet
+git clone https://github.com/EribanOjeda/Examen1-TiendaCelulares.git
